@@ -1,0 +1,32 @@
+AnyFolder Joints = 
+{
+//  AnySphericalJoint Ball&Socket = {
+//    AnyRefNode &CouplerNode = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus;
+//      AnySeg &Slider = Main.;
+//    };
+
+  
+};
+
+AnyFolder Drivers = 
+{
+  
+  AnyKinEqSimpleDriver GHAbduction={
+   AnyKinMeasure& ref1
+  =.Main.HumanModel.BodyModel.Interface.Right.GlenohumeralAbduction;
+   DriverPos = {10*pi/180};
+   DriverVel = {110*pi/180};
+   Reaction.Type = {Off};
+ };
+ 
+  AnyKinEqSimpleDriver ElbwFlexion={
+   AnyKinMeasure& ref1
+  =.Main.HumanModel.BodyModel.Interface.Right.ElbowFlexion;
+   DriverPos = {10*pi/180};
+   DriverVel = {50*pi/180};
+   Reaction.Type = {Off};
+ };
+
+  
+};
+

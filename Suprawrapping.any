@@ -1,0 +1,18 @@
+Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula = {
+    
+  // Torus to avoid penetrations on the scapular spine
+  AnyRefNode My_supraspinatus_torus ={
+    sRel = {-0.015, -0.012, -0.027};
+    ARel = RotMat(-pi/2, y);
+    
+    AnyDrawRefFrame drw = {Visible=Off;};
+    AnySurfTorus surface = {
+      MajorRadius = 0.03;
+      MinorRadius = 0.01;
+      viewSurface = {Visible=On; RGB={0.65, 0.65, 0.65}; Opacity=0.8;};
+    }; // surface
+    
+  }; // My_supraspinatus_torus
+  
+
+}; // Scapula
